@@ -142,12 +142,36 @@ body {
 }
 
 /*----------header----------*/
+.header {
+  background-color: #ffffff;
+}
 .header-list .header-item + .header-item {
   margin-left: 50px;
 }
 .header .container {
   display: flex;
   align-items: center;
+}
+.header-item {
+  display: flex;
+  align-items: center;
+}
+.header-item::before {
+  content: '';
+  width: 16px;
+  height: 16px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 10px;
+}
+.icon-envelope::before {
+  background-image: url(../images/envelope.svg);
+  background-size: 16px 12px;
+}
+.icon-smartphone::before {
+  background-image: url(../images/smartphone.svg);
+  background-size: 10px 16px;
 }
 .header-link {
   padding-top: 32px;
@@ -169,8 +193,15 @@ body {
 
 /*----------hero----------*/
 .hero {
-  background-color: var(--thirty-bgc-color);
   text-align: center;
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/hero.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 .hero-title {
   margin-top: 0;
@@ -224,6 +255,22 @@ body {
   border-radius: 4px;
   margin-bottom: 30px;
 }
+.icon-antenna::before {
+  background-image: url(../images/antenna.svg);
+  background-size: auto 70px;
+}
+.icon-clock::before {
+  background-image: url(../images/clock.svg);
+  background-size: auto 70px;
+}
+.icon-diagram::before {
+  background-image: url(../images/diagram.svg);
+  background-size: auto 70px;
+}
+.icon-astronaut::before {
+  background-image: url(../images/astronaut.svg);
+  background-size: auto 70px;
+}
 .advantages-title {
   margin-bottom: 10px;
 
@@ -274,6 +321,10 @@ body {
 }
 .team-item {
   flex-basis: calc((100% - 4 * 30) / 4);
+  background-color: #ffffff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
 }
 .team-item:not(:last-child) {
   margin-right: 30px;
@@ -339,6 +390,7 @@ body {
 }
 /*----------portfolio----------*/
 .portfolio {
+  background-color: var(--primary-bgc-color);
   text-align: center;
   padding-top: 94px;
   padding-bottom: 94px;
@@ -361,6 +413,8 @@ body {
 .portfolio-btn:hover {
   background-color: var(--accent-color);
   color: #ffffff;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 .portfolio-btn-list {
   display: flex;
@@ -384,6 +438,11 @@ body {
 }
 .portfolio-item:nth-child(3n + 1) {
   margin-left: 0;
+}
+.portfolio-item:focus,
+.portfolio-item:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 .portfolio-title {
   margin-bottom: 4px;
