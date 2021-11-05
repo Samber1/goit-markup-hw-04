@@ -146,10 +146,7 @@ body {
   background-color: #ffffff;
   height: 80px;
 }
-.header-item:nth-child(2n + 1) {
-  margin-right: 10px;
-}
-.header-item:nth-child(2) {
+.header-item:first-child {
   margin-right: 30px;
 }
 .header-link:hover .header-icon,
@@ -167,6 +164,7 @@ body {
 }
 .header-icon {
   fill: var(--primary-text-color);
+  margin-right: 10px;
 }
 .header-link {
   padding-top: 32px;
@@ -189,15 +187,19 @@ body {
 
 /*----------hero----------*/
 .hero {
+  display: flex;
   text-align: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
   background-image: linear-gradient(
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
     ),
     url(../images/hero.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
 }
 .hero-title {
   margin-top: 0;
@@ -425,6 +427,21 @@ body {
 
   background-color: var(--thirty-bgc-color);
 }
+.footer-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: baseline;
+
+  width: 1170px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.address-container {
+  margin-right: 70px;
+}
+.subscribe-container {
+}
 .footer-geo-link {
   margin-bottom: 9px;
   display: inline-block;
@@ -456,6 +473,30 @@ body {
 .footer-geo-link:hover {
   color: var(--accent-color);
 }
+.footer-subscribe {
+  display: inline-block;
+  font-style: normal;
+  font-family: Roboto;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+.footer-social {
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.footer-social-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  list-style: none;
+  width: 206px;
+}
+
 /*----------portfolio----------*/
 .portfolio {
   background-color: var(--primary-bgc-color);
@@ -468,7 +509,7 @@ body {
   padding: 6px 22px;
   border-radius: 4px;
 
-  background-color: #f5f4fa;
+  background-color: #e5e5e5;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.62;
